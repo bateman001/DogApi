@@ -6,19 +6,13 @@ function getDogs(num){
 
 function displayDogs(responseJson){
 	console.log(responseJson.message);
-	let arrLength = responseJson.message.length;
-	
-	for(let i = 0; i < arrLength; i++){
-		$("section").append(`<image src="${responseJson.message[i]}" alt="img${i}" width="300">`);
-	}
-	
 }
 
 function watchForm(){
 	$(".js-dogs").submit(e =>{
 	
 	e.preventDefault();
-	$("section").empty();
+		
 	number = $("#numberOfDogs").val();
 	getDogs(number);
 	});
